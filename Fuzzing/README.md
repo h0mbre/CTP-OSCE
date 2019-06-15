@@ -8,7 +8,7 @@ This is just a little helper that takes a saved HTTP request from a file and the
 root@kali:~/ # python boo-gen.py get.txt
 ```
 
-If you want to specify an output file name (the name of your boofuzz script), you can use the `-f, --filename` args.
+If you want to specify an output file name (the name of your boofuzz script), you can use the `-f, --filename` args. **Default output file is called 'http.py'**
 
 ```terminal_session
 root@kali:~/ # python boo-gen.py get.txt -f demo.py
