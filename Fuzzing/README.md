@@ -5,20 +5,20 @@ This is just a little helper that takes a saved HTTP request from a file and the
 ## Usage
 
 ```terminal_session
-astrid:~/ # python boo-gen.py get.txt
+root@kali:~/ # python boo-gen.py get.txt
 ```
 
 If you want to specify an output file name (the name of your boofuzz script), you can use the `-f, --filename` args.
 
 ```terminal_session
-astrid:~/ # python boo-gen.py get.txt -f demo.py
+root@kali:~/ # python boo-gen.py get.txt -f demo.py
 ```
 
 ## Example
 
 ### Saved HTTP Request
 ```terminal_session
-astrid:~/ # cat get.txt                                                    
+root@kali:~/ # cat get.txt                                                    
 GET / HTTP/1.1
 Host: 192.168.1.201
 User-Agent: Mozilla/5.0 (X11; Linux i686; rv:60.0) Gecko/20100101 Firefox/60.0
@@ -34,7 +34,7 @@ Cache-Control: max-age=0
 
 ### Saving Output Boofuzz Script to 'demo.py'
 ```terminal_session
-astrid:~/ # python boo-gen.py get.txt -f demo.py
+root@kali:~/ # python boo-gen.py get.txt -f demo.py
 ```
 
 ### demo.py
