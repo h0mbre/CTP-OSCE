@@ -1,4 +1,4 @@
-## HTTP Boofuzz Script Generator
+## Boo-Gen!
 
 This is just a little helper that takes a saved HTTP request from a file and then uses that to generate an HTTP Boofuzz script. 
 
