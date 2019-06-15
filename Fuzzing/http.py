@@ -12,7 +12,8 @@ def main():
 
     s_initialize(name="Request")
     with s_block("Request-Line"):
-        s_group("Method", ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE'])
+        #s_group("Method", ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE'])
+	s_group("Method", ['GET', 'POST'])
         s_delim(" ", name='space-1', fuzzable = False)
         s_string("/index.html", name='Request-URI', fuzzable = False)
         s_delim(" ", name='space-2', fuzzable = False)
