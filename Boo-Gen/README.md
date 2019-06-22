@@ -8,6 +8,7 @@ This is just a little helper that takes a saved HTTP request from a file and the
 
 ### Examples
 `boo-gen.py get.txt --get -f fuzz.py`
+
 `boo-gen.py post.txt --post -f fuzz.py`
 
 ## GET Requests
