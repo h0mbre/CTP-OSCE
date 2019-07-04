@@ -2,7 +2,7 @@
 
 This is just a wrapper on absolomb's reverse shell they describe [on their blog](https://www.absolomb.com/2018-07-24-VulnServer-GTER/). This will literally just create the shellcode based on configurable syscall addresses, LHOST, and LPORT arguments, you still have to make sure your stack-alignment is correct. The shellcode should be 120 bytes long. 
 
-**Warning**, this wrapper is very hacky and probably not very useful lol. I'm pretty sure ASLR kills this approach, but I was very bored today.
+**Warning**, this wrapper is very hacky and probably not very useful lol but I was very bored today. I'm pretty sure ASLR kills this approach.
 
 ## Usage
 
