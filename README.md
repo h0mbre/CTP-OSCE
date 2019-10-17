@@ -1,2 +1,2 @@
-# CTP
-Scripts I used during CTP
+# CTP/OSCE
+Scripts I used during CTP/OSCE
