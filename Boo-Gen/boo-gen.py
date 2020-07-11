@@ -34,13 +34,13 @@ space = 3
 
 
 def post():
-	global Return
-	global space
-	global host
-	global method
-	global URI
-	fuzz = open(filename, "w")
-	fuzz.write('''#!/usr/bin/env python
+    global Return
+    global space
+    global host
+    global method
+    global URI
+    fuzz = open(filename, "w")
+    fuzz.write('''#!/usr/bin/env python
 # Designed for use with boofuzz v0.0.9
 from boofuzz import *
 
@@ -59,55 +59,56 @@ def main():
         s_string("''' + URI + '''", name='Request-URI', fuzzable = False)
         s_delim(" ", name='space-2', fuzzable = False)
         s_string("HTTP/1.1", name='HTTP-Version', fuzzable = False)
-	s_delim("\\r\\n", name='return-1', fuzzable = False)\n''')
-	fuzz.close()
+    s_delim("\\r\\n", name='return-1', fuzzable = False)\n''')
+    fuzz.close()
 
-	for x in list1:
-		first = x.split(" ", 1)[0]
-		second = x.split(" ", 1)[1]
-		fuzz2 = open(filename, "a")
-		fuzz2.write('''	s_string("''' + first + '''", name="''' + first.strip(":") + '''", fuzzable = False)
-	s_delim(" ", name="space-''' + str(space) + '''", fuzzable = False)
-	s_string("''' + second + '''", name="''' + first.strip(":") + '''-Value", fuzzable = False)
-	s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
-		Return = Return + 1
-		space = space + 1
-		fuzz2.close()
-	equal = 0
-	amp = 0
-	fuzz3 = open(filename, "a")
-	fuzz3.write('''	s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
-	fuzz3.close()
-	for x in list2:
-		first = x.split("=")[0]
-		second = x.split("=")[1]
-		fuzz4 = open(filename, "a")
-		fuzz4.write('''	s_string("''' + first + '''", name="''' + first + '''-Param", fuzzable = False)
-	s_delim("=", name="Equal-''' + str(equal + 1) + '''", fuzzable = False)
-	s_string("''' + second + '''", name="''' + first + '''-Value", fuzzable = False)
-	s_delim("&", name="Ampersand-''' + str(amp + 1) + '''", fuzzable = False)\n''')
-		equal = equal + 1
-		amp = amp + 1
-		fuzz4.close()
-	fuzz5 = open(filename, "a")
-	fuzz5.write('''
+    for x in list1:
+        first = x.split(" ", 1)[0]
+        second = x.split(" ", 1)[1]
+        fuzz2 = open(filename, "a")
+        fuzz2.write('''    s_string("''' + first + '''", name="''' + first.strip(":") + '''", fuzzable = False)
+    s_delim(" ", name="space-''' + str(space) + '''", fuzzable = False)
+    s_string("''' + second + '''", name="''' + first.strip(":") + '''-Value", fuzzable = False)
+    s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
+        Return = Return + 1
+        space = space + 1
+        fuzz2.close()
+    equal = 0
+    amp = 0
+    fuzz3 = open(filename, "a")
+    fuzz3.write('''    s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
+    fuzz3.close()
+    for x in list2:
+        first = x.split("=")[0]
+        second = x.split("=")[1]
+        fuzz4 = open(filename, "a")
+        fuzz4.write('''    s_string("''' + first + '''", name="''' + first + '''-Param", fuzzable = False)
+    s_delim("=", name="Equal-''' + str(equal + 1) + '''", fuzzable = False)
+    s_string("''' + second + '''", name="''' + first + '''-Value", fuzzable = False)
+    s_delim("&", name="Ampersand-''' + str(amp + 1) + '''", fuzzable = False)\n''')
+        equal = equal + 1
+        amp = amp + 1
+        fuzz4.close()
+    fuzz5 = open(filename, "a")
+    fuzz5.write('''
     session.connect(s_get("Request"))
 
     session.fuzz()
 
 
 if __name__ == "__main__":
-	    main()''')
-	fuzz5.close()
-		
+    main()''')
+    fuzz5.close()
+
+
 def get():
-	global Return
-	global space
-	global host
-	global method
-	global URI
-	fuzz = open(filename, "w")
-	fuzz.write('''#!/usr/bin/env python
+    global Return
+    global space
+    global host
+    global method
+    global URI
+    fuzz = open(filename, "w")
+    fuzz.write('''#!/usr/bin/env python
 # Designed for use with boofuzz v0.0.9
 from boofuzz import *
 
@@ -126,23 +127,23 @@ def main():
         s_string("''' + URI + '''", name='Request-URI', fuzzable = False)
         s_delim(" ", name='space-2', fuzzable = False)
         s_string("HTTP/1.1", name='HTTP-Version', fuzzable = False)
-	s_delim("\\r\\n", name='return-1', fuzzable = False)\n''')
-	fuzz.close()
+    s_delim("\\r\\n", name='return-1', fuzzable = False)\n''')
+    fuzz.close()
 
-	for x in list1:
-		first = x.split(" ", 1)[0]
-		second = x.split(" ", 1)[1]
-		fuzz2 = open(filename, "a")
-		fuzz2.write('''	s_string("''' + first + '''", name="''' + first.strip(":") + '''", fuzzable = False)
-	s_delim(" ", name="space-''' + str(space) + '''", fuzzable = False)
-	s_string("''' + second + '''", name="''' + first.strip(":") + '''-Value", fuzzable = False)
-	s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
-		Return = Return + 1
-		space = space + 1
-		fuzz2.close()
+    for x in list1:
+        first = x.split(" ", 1)[0]
+        second = x.split(" ", 1)[1]
+        fuzz2 = open(filename, "a")
+        fuzz2.write('''    s_string("''' + first + '''", name="''' + first.strip(":") + '''", fuzzable = False)
+    s_delim(" ", name="space-''' + str(space) + '''", fuzzable = False)
+    s_string("''' + second + '''", name="''' + first.strip(":") + '''-Value", fuzzable = False)
+    s_delim("\\r\\n", name="return-''' + str(Return) + '''", fuzzable = False)\n''')
+        Return = Return + 1
+        space = space + 1
+        fuzz2.close()
 
-	fuzz3 = open(filename, "a")
-	fuzz3.write('''        s_static("\\r\\n", name="Request-Line-CRLF")
+    fuzz3 = open(filename, "a")
+    fuzz3.write('''    s_static("\\r\\n", name="Request-Line-CRLF")
     s_static("\\r\\n", "Request-CRLF")
 
     session.connect(s_get("Request"))
@@ -153,11 +154,12 @@ def main():
 if __name__ == "__main__":
     main()''')
 
-	fuzz3.close()
+    fuzz3.close()
+
 
 if args.post:
-	post()
+    post()
 elif args.get:
-	get()
+    get()
 else:
-	print("Specify the type of HTTP request with the --post or --get flags!")	
+    print("Specify the type of HTTP request with the --post or --get flags!")
